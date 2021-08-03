@@ -24,6 +24,7 @@ header {
   background-position: center;
   background-attachment: fixed;
   background-position: 80%;
+  z-index: 9999;
 }
 
 body {
@@ -233,9 +234,18 @@ section {
   transform: rotate(-58deg);
 }
 
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
+  content: none;
+}
 
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+  content: "";
+}
 
 /* what we do */
+
 
 .intro p {
   line-height: 1.7;
